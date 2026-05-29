@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     environment {
-        EC2_HOST = "YOUR-EC2-IP"
+        EC2_HOST = "ec2-34-224-251-9.compute-1.amazonaws.com"
         EC2_USER = "ec2-user"
 
         SOURCE_DIR = "./html/"
@@ -14,7 +14,7 @@ pipeline {
         stage('Git Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/your-repo.git'
+                url: 'https://github.com/relaxamj/HTML.git'
             }
         }
 
